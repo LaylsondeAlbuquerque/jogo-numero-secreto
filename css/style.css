@@ -1,26 +1,43 @@
+/**
+ * @file style.css
+ * @author Laylson Albuquerque
+ * @version 1.0
+ *
+ * @description
+ * Folha de estilos principal para o projeto "Jogo do Número Secreto".
+ * Inclui um reset básico, estilos globais, layout do container principal,
+ * estilização de componentes e regras de responsividade.
+ */
+
+
+/* ==========================================================================
+   1. RESET BÁSICO E ESTILOS GLOBAIS
+   ========================================================================== */
+
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garante que padding e border não somem à largura/altura total. */
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /* Define a cor padrão do texto para branco. */
 }
 
 body {
     background: linear-gradient(#5e13a5 0%, #200432 33.33%, #190432 66.67%, #04010e 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh; /* Garante que o corpo ocupe 100% da altura da janela. */
+    display: flex; /* Ativa o Flexbox para facilitar a centralização. */
+    align-items: center; /* Centraliza o conteúdo verticalmente. */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente. */
+    position: relative;
 }
 
-
+/* Pseudo-elemento para adicionar uma imagem de fundo secundária ao body. */
 body::before {
     background-image: url("img/coda.png");
     background-repeat: no-repeat;
     background-position: right;
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 100%;
@@ -28,6 +45,12 @@ body::before {
     opacity: 0.4;
 }
 
+
+/* ==========================================================================
+   2. LAYOUT PRINCIPAL
+   ========================================================================== */
+
+/* Contêiner principal do jogo, a "janela" central. */
 .container {
     width: 80%;
     height: 80%;
@@ -40,9 +63,10 @@ body::before {
     box-shadow: 0px 0px 40px 0px rgba(27, 0, 49, 0.637);
     background-image: url("img/blur.png");
     background-size: 100% 100%;
-    position: relative;
+    position: relative; /* Necessário para posicionar filhos absolutos, se houver. */
 }
 
+/* Contêiner interno que agrupa a área de informações e a imagem. */
 .container__conteudo {
     display: flex;
     width: 100%;
@@ -53,17 +77,40 @@ body::before {
     padding: 0;
 }
 
+/* Seção da esquerda, com os textos, input e botões. */
 .container__informacoes {
-    display: grid;
+    display: grid; /* Organiza os filhos em uma grade. */
     height: auto;
     width: 60%;
-    gap: 3rem;
+    gap: 3rem; /* Espaçamento entre os elementos da grade (texto, input, botões). */
+}
+
+/* Imagem da direita (astronauta). */
+#astronalta {
+    width: 40%;
+    height: auto; /* Mantém a proporção da imagem. */
+}
+
+
+/* ==========================================================================
+   3. ESTILOS DE COMPONENTES E TEXTOS
+   ========================================================================== */
+
+/* --- Elementos de Texto --- */
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 64px;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
 }
 
 .container__texto {
     margin: 0px;
     padding: 0px;
-    gap: 0px;
 }
 
 .texto__paragrafo {
@@ -71,10 +118,11 @@ body::before {
     font-weight: 400;
 }
 
+/* --- Elementos de Formulário --- */
+
 .container__input-chute {
-    margin: opx;
+    margin: 0px; 
     padding: 0px;
-    gap: 0px;
 }
 
 .container__input {
@@ -92,7 +140,7 @@ body::before {
 
 .container__botoes {
     display: flex;
-    gap: 2em;
+    gap: 2em; /* Espaçamento entre os botões. */
 }
 
 .container__botao {
@@ -103,25 +151,16 @@ body::before {
     font-size: 24px;
     font-weight: 700;
     border: none;
-    cursor: pointer;
+    cursor: pointer; /* Muda o cursor para a 'mãozinha' ao passar por cima. */
 }
 
-
-h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 64px;
-}
-
-p,
-button {
-    font-family: 'Inter', sans-serif;
-}
-
+/* Estilo para quando um botão está desabilitado. */
 button:disabled {
     background-color: gray;
+    cursor: not-allowed; /* Muda o cursor para indicar que o botão não pode ser clicado. */
 }
 
-
+/* Parágrafo específico para mensagens de erro. */
 #erro {
     color: rgb(255, 0, 119);
     font-size: 14px;
@@ -131,12 +170,30 @@ button:disabled {
     margin-right: 1rem;
 }
 
-#astronalta {
-    width: 40%;
-    height: auto;
+
+/* ==========================================================================
+   4. CLASSES UTILITÁRIAS
+   ========================================================================== */
+
+/* Classe para esconder elementos visualmente, mas mantê-los acessíveis para leitores de tela. */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
 }
 
 
+/* ==========================================================================
+   5. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Estilos aplicados em telas com largura máxima de 1250px (tablets, notebooks menores). */
 @media screen and (max-width: 1250px) {
 
     h1 {
@@ -147,23 +204,25 @@ button:disabled {
         font-size: 16px;
     }
 
-
     .texto__paragrafo {
         font-size: 24px;
     }
 
+    /* Esconde a imagem do astronauta em telas menores para dar mais espaço ao conteúdo. */
     #astronalta {
         display: none;
     }
 
+    /* Ajustes no layout do conteúdo principal para telas menores. */
     .container__conteudo {
-        display: block;
-        position: inherit;
+        display: block; 
+        position: static;
         margin: 0px;
     }
 
+    /* Centraliza e ajusta a largura da área de informações. */
     .container__informacoes {
         width: 80%;
-        margin: 100px auto;
+        margin: 100px auto; /* Centraliza horizontalmente. */
     }
 }
