@@ -6,8 +6,6 @@
   </a>
 </p>
 
-<p align="center" style="color: rad">Em Desenvolvimento<p/>
-
 ---
 
 ## 📜 Sobre o Projeto
