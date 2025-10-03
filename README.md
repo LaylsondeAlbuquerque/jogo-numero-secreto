@@ -15,7 +15,7 @@
 Este é um projeto de estudo desenvolvido para colocar em prática conceitos fundamentais de **HTML, CSS e JavaScript**. A aplicação é um jogo simples e interativo onde o usuário deve adivinhar um número secreto gerado aleatoriamente, recebendo dicas se o chute foi maior ou menor que o número correto.
 
 O desenvolvimento foi uma jornada de aprendizado, desde a estruturação semântica do HTML e a criação de um layout responsivo com Flexbox, até a manipulação dinâmica do DOM e a validação de entradas do usuário com JavaScript.
-
+```
 LaylsondeAlbuquerque/
 │
 ├── css/
@@ -29,16 +29,17 @@ LaylsondeAlbuquerque/
 ├── LICENSE
 ├── README.md
 └── index.html
+```
 ---
 
 ## ✨ Funcionalidades
 
--   Geração de um número aleatório a cada nova partida.
--   Entrada de dados do usuário com validação em tempo real.
--   Feedback visual e textual para o usuário (dicas de "maior" ou "menor").
--   Contagem de tentativas.
--   Botão para reiniciar o jogo.
--   Design responsivo que se adapta a diferentes tamanhos de tela.
+-[ ]  Geração de um número aleatório a cada nova partida.
+-[x]   Entrada de dados do usuário com validação em tempo real.
+- [ ]  Feedback visual e textual para o usuário (dicas de "maior" ou "menor").
+-[ ]  Contagem de tentativas.
+-[ ]  Botão para reiniciar o jogo.
+-[x]  Design responsivo que se adapta a diferentes tamanhos de tela.
 
 ---
 
