@@ -6,6 +6,8 @@
   </a>
 </p>
 
+<p align="center" style="color: rad">Em Desenvolvimento<p/>
+
 ---
 
 ## 📜 Sobre o Projeto
@@ -14,6 +16,19 @@ Este é um projeto de estudo desenvolvido para colocar em prática conceitos fun
 
 O desenvolvimento foi uma jornada de aprendizado, desde a estruturação semântica do HTML e a criação de um layout responsivo com Flexbox, até a manipulação dinâmica do DOM e a validação de entradas do usuário com JavaScript.
 
+LaylsondeAlbuquerque/
+│
+├── css/
+│      └── styles.css
+├── img/
+│      └── astronalta.png
+│      └── blur.png
+│      └── coda.png
+├── js/
+│      └── scripts.js
+├── LICENSE
+├── README.md
+└── index.html
 ---
 
 ## ✨ Funcionalidades
