@@ -34,12 +34,12 @@ LaylsondeAlbuquerque/
 
 ## ✨ Funcionalidades
 
--[ ]  Geração de um número aleatório a cada nova partida.
--[x]   Entrada de dados do usuário com validação em tempo real.
-- [ ]  Feedback visual e textual para o usuário (dicas de "maior" ou "menor").
--[ ]  Contagem de tentativas.
--[ ]  Botão para reiniciar o jogo.
--[x]  Design responsivo que se adapta a diferentes tamanhos de tela.
+- [ ] Geração de um número aleatório a cada nova partida.
+- [x] Entrada de dados do usuário com validação em tempo real.
+- [ ] Feedback visual e textual para o usuário (dicas de "maior" ou "menor").
+- [ ] Contagem de tentativas.
+- [ ] Botão para reiniciar o jogo.
+- [x] Design responsivo que se adapta a diferentes tamanhos de tela.
 
 ---
 
