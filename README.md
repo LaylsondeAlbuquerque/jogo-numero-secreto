@@ -10,24 +10,10 @@
 
 ## 📜 Sobre o Projeto
 
-Este é um projeto de estudo desenvolvido para colocar em prática conceitos fundamentais de **HTML, CSS e JavaScript**. A aplicação é um jogo simples e interativo onde o usuário deve adivinhar um número secreto gerado aleatoriamente, recebendo dicas se o chute foi maior ou menor que o número correto.
+Este é um projeto de estudo desenvolvido durante um curso na **Alura** e com base no layout que eles disponibilizaram para os alunos, onde pude colocar em prática conceitos fundamentais de **HTML, CSS e JavaScript**. A aplicação é um jogo simples e interativo onde o usuário deve adivinhar um número secreto gerado aleatoriamente, recebendo dicas se o chute foi maior ou menor que o número correto.
 
 O desenvolvimento foi uma jornada de aprendizado, desde a estruturação semântica do HTML e a criação de um layout responsivo com Flexbox, até a manipulação dinâmica do DOM e a validação de entradas do usuário com JavaScript.
-```
-LaylsondeAlbuquerque/
-│
-├── css/
-│      └── styles.css
-├── img/
-│      └── astronalta.png
-│      └── blur.png
-│      └── coda.png
-├── js/
-│      └── scripts.js
-├── LICENSE
-├── README.md
-└── index.html
-```
+
 ---
 
 ## ✨ Funcionalidades
